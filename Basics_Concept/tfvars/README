@@ -1,0 +1,11 @@
+How To Run
+
+# DEV ENV
+terraform init -reconfigure -backend-config=DEV/backend.tf
+terraform plan -var-file=DEV/backend.tfvars
+terraform apply -var-file=DEV/backend.tfvars
+
+# PROD ENV
+terraform init -reconfigure -backend-config=PROD/backend.tf
+terraform plan -var-file=PROD/prod.tfvars
+terraform apply -var-file=PROD/prod.tfvars
